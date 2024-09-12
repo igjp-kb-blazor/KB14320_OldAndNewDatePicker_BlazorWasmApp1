@@ -1,0 +1,29 @@
+﻿<div style="max-width:400px; margin:auto; padding:24px; display: flex; flex-direction:column; gap:24px;">
+    <h5>Blazor DatePicker in NuGet package v.24.1.46</h5>
+
+    <div>
+        <h6>&lt;IgbXDatePicker&gt; (旧コンポーネント)</h6>
+        <IgbXDatePicker Height="60px"
+                        Width="220px"
+                        @bind-Value="@SelectedDate"
+                        ShowWeekNumbers="true" />
+    </div>
+
+    <div>
+        <h6>&lt;IgbDatePicker&gt; (新コンポーネント)</h6>
+        <IgbDatePicker Height="60px"
+                        Width="220px"
+                        @bind-Value="@SelectedDate"
+                        ShowWeekNumbers="true" />
+    </div>
+
+    <div>
+        Selected Date: @SelectedDate.ToString("MM/dd/yyyy")
+    </div>
+</div>
+
+
+@code
+{
+    private DateTime SelectedDate { get; set; } = DateTime.Today;
+}
